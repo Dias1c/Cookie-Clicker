@@ -1,0 +1,57 @@
+﻿<Window x:Class="CookieClicker_WPF.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CookieClicker_WPF"
+        mc:Ignorable="d"
+        Title="CookieClicker" Height="450" Width="800" Icon="https://avatanplus.com/files/resources/original/578cdb575613a155fe38cd39.png">
+  <Grid Background="#FBEDCE">
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition/>
+      <ColumnDefinition Width="250"/>
+    </Grid.ColumnDefinitions>
+    <Grid.RowDefinitions>
+      <RowDefinition/>
+    </Grid.RowDefinitions>
+    <TextBlock Margin="20 10" Name="Tb_CntCookie" Text="Кол-во Печенек: 0" FontSize="30px"/>
+    <Button HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Background="#FBEDCE" BorderThickness="0" Width="300" Height="300" Name="Btn_Cookie" VerticalAlignment="Center" HorizontalAlignment="Center" Click="Btn_Cookie_Click">
+      <Image Width="290" Height="290" 
+             Source="https://avatanplus.com/files/resources/original/578cdb575613a155fe38cd39.png"/>
+    </Button>
+    <!---->
+    <StackPanel Grid.Row="0" Grid.Column="1" Background="#783C00">
+
+      <!---->
+      <StackPanel Background="#FBDD9B" Margin="5">
+        <TextBlock Name="Tb_Redouble" Margin="5" TextWrapping="Wrap">Колво кликов в 1 клике: Number</TextBlock>
+        <Button Name="Btn_Redouble" Content="Улучшить" Foreground="#FBEDCE" HorizontalAlignment="Left" Margin="5" BorderBrush="#783C00" BorderThickness="2" Background="#783C00" Click="Btn_Redouble_Click"/>
+      </StackPanel>
+      <StackPanel Background="#FBDD9B" Margin="5">
+        <TextBlock Name="Tb_lucky" Margin="5" TextWrapping="Wrap">Шанс получить несколько пиченек при клике: Number</TextBlock>
+        <Button Name="Btn_lucky" Content="Улучшить" Foreground="#FBEDCE" HorizontalAlignment="Left" Margin="5" BorderBrush="#783C00" BorderThickness="2" Background="#783C00" Click="Btn_lucky_Click"/>
+        <StackPanel Background="#FBDD9B" Name="Sp_Lucky" Orientation="Horizontal" Visibility="Collapsed">
+
+          <StackPanel Width="120" Margin="2.5">
+            <TextBlock Name="Tb_luckyUpdateChanse" TextWrapping="Wrap" Text="Шанс Удачливый: "/>
+            <Button Name="Btn_luckyUpdateChanse" Content="Улучшить" Foreground="#FBEDCE" HorizontalAlignment="Left" Margin="5" BorderBrush="#783C00" BorderThickness="2" Background="#783C00" Click="Btn_luckyUpdateChanse_Click"/>
+          </StackPanel>
+          <StackPanel Width="120" Margin="2.5">
+            <TextBlock Name="Tb_luckyUpdatePrize"  TextWrapping="Wrap" Text="Приз Удачливый: "/>
+            <Button Name="Btn_luckyUpdatePrize" Content="Улучшить" Foreground="#FBEDCE" HorizontalAlignment="Left" Margin="5" BorderBrush="#783C00" BorderThickness="2" Background="#783C00" Click="Btn_luckyUpdatePrize_Click"/>
+          </StackPanel>
+
+        </StackPanel>
+      </StackPanel>
+      <StackPanel Background="#FBDD9B" Margin="5">
+        <TextBlock Name="Tb_PlayLotery" Margin="5" TextWrapping="Wrap">Испытай удачу выйграй 1000 печенек. Стоимость 100.</TextBlock>
+        <Button Name="Btn_PlayLotery" Content="Играть в Лоторею"  Foreground="#FBEDCE" HorizontalAlignment="Left" Margin="5" BorderBrush="#783C00" BorderThickness="2" Background="#783C00" Click="Btn_PlayLotery_Click"/>
+
+        <StackPanel Background="#FBDD9B" Margin="5">
+          <TextBlock Name="Tb_UpdateLoteryChanse" TextWrapping="Wrap">Подкуп Улучшение шанса выйграша в лотореи:</TextBlock>
+          <Button Name="Btn_UpdateLoteryChanse" Content="Улучшить" Foreground="#FBEDCE" HorizontalAlignment="Left" Margin="0 10 0 0" BorderBrush="#783C00" BorderThickness="2" Background="#783C00" Click="Btn_UpdateLoteryChanse_Click"/>
+        </StackPanel>
+      </StackPanel>
+    </StackPanel>
+  </Grid>
+</Window>
